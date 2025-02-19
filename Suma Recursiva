@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int SumaRecursiva(int n);// el prototipo
+int main()
+{
+    int suma,n;
+    do {
+        cout << "ingrese su numero   n:";
+        cin >> n;
+        suma = SumaRecursiva(n);
+    }
+        while (n < 0);
+        cout << "la suma es: " <<suma;
+
+
+}
+
+
+
+int SumaRecursiva(int n) {
+    if (n <= 1)
+        return 1;
+    else return SumaRecursiva(n - 1) + n;
+}
