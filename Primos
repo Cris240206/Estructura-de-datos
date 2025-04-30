@@ -1,0 +1,44 @@
+
+
+#include <iostream>
+using namespace std;
+void numeroP(int n, int V[]);
+void mostrar(int n , int V[]);
+int main()
+{
+    int n, Vector[100];
+    cout << "Indique su numero N: " << endl;
+    cin >> n;
+  
+    numeroP(n, Vector);
+    mostrar(n, Vector);
+}
+ void numeroP(int n, int V[]) {
+    int cont = 2, num=1, nop;
+    for (int i = 0; i < n; i++) {
+        cont = 2;
+        do {
+           
+            nop = num % cont;
+            cont = cont + 1;
+            if (nop ==0) {
+                num = num + 1;
+            }
+            if (num == 1) {
+                cont = 1;
+            }
+        } while (num!=cont);
+
+        V[i] = num;
+        num = num + 1;
+    }
+
+       
+    }
+
+    void mostrar(int n, int V[]){
+        for (int i = 0; i < n; i++) {
+            cout << V[i] << " ";
+
+        }}
+
